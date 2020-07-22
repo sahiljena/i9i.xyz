@@ -44,14 +44,7 @@ $conn->close();
     <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='css/main-css.css' rel='stylesheet'>
-    <title>i9i.xyz</title>
-    <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6LeSqKsZAAAAAEJSyZAePgLG7WYJ8fvffbvdM_vs'
-        });
-      };
-    </script>
+    <title>i9i.xyz Link Shortner</title>
     <style type="text/css">
       body{
          background-color:#000;
@@ -73,12 +66,6 @@ $conn->close();
       
     </div>
     <div class="col-sm">
-  <!---<form action="?" method="POST">
-      <div id="html_element"></div>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
-    </form>---->
  <div class="form-group">
     <label style="color:#ff0077 ; font-family:Fredoka One; " for="exampleInputEmail1"><h3>URL</h3></label>
     <input style="background-color:#36363b; color:#ff0077 ;" type="url" class="form-control" id="url" aria-describedby="urlHelp" placeholder="Enter URL" Required>
@@ -104,7 +91,7 @@ $conn->close();
   <script>
     function get_data(){
     document.getElementById("load").innerHTML='<center><div class="loader"></div></center>';
-    var defaulturl="dextor.php?mod=1&longurl=";
+    var defaulturl="shorturl.php?mod=1&longurl=";
     var long = document.getElementById("url").value;
     var longurl= defaulturl+long;
     fetch(longurl).then(res => res.json()).then(data => {
